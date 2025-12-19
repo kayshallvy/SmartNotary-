@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Notary+ | Rekomendasi Layanan Notaris & PPAT</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="brand-bar">
+        <div class="brand">
+          <div class="logo">SN+</div>
+          <div>
+            <h1>Smart Notary+</h1>
+            <p>Sistem Rekomendasi Layanan Notaris &amp; PPAT</p>
+          </div>
+        </div>
+        <nav class="primary-nav" aria-label="Navigasi utama">
+          <button class="nav-link" data-go="home" aria-label="Buka halaman beranda">
+            Home
+          </button>
+          <button class="nav-link" data-go="consult" aria-label="Buka form konsultasi">
+            Konsultasi
+          </button>
+          <button class="nav-link" data-go="manual" aria-label="Buka halaman manual book">
+            Manual Book
+          </button>
+          <button class="nav-link" data-go="info" aria-label="Buka halaman informasi">
+            Informasi
+          </button>
+        </nav>
+        <button id="primaryCta" class="primary-btn">Mulai Konsultasi</button>
+      </header>
+
+      <main>
+        <!-- HOME -->
+        <section id="view-home" class="view active">
+          <div class="dashboard-hero">
+            <div class="hero-content">
+              <div class="hero-badge">
+                <span class="badge-icon">⚡</span>
+                <span>Smart Guidance System</span>
+                <span class="badge-pulse"></span>
+              </div>
+              <h2>Smart Notary &amp; PPAT Service Advisor</h2>
+              <p class="lead">
+                Temukan layanan Notaris &amp; PPAT yang tepat dalam hitungan detik. Sistem cerdas ini digunakan secara internal oleh
+                <strong>Kantor Notaris &amp; PPAT Putri Sugiharsiwi, S.H., M.Kn.</strong>
+                untuk membantu menganalisis kebutuhan klien dan menyusun rekomendasi lengkap dokumen, pihak hadir, dan catatan hukum.
+              </p>
+              <div class="cta-stack">
+                <button id="startWizard" class="primary-btn pulse-btn">
+                  <span class="btn-icon">🚀</span> 
+                  <span>Mulai Konsultasi Sekarang</span>
+                  <span class="btn-arrow">→</span>
+                </button>
+                <button id="openGuide" class="secondary-btn">
+                  <span class="btn-icon">📖</span> 
+                  <span>Lihat Panduan</span>
+                </button>
+              </div>
+              <div class="hero-features-mini">
+                <div class="mini-feature">
+                  <span class="mini-icon">🔒</span>
+                  <span>100% Private</span>
+                </div>
+                <div class="mini-feature">
+                  <span class="mini-icon">⚡</span>
+                  <span>Instant Result</span>
+                </div>
+              </div>
+            </div>
+            <div class="hero-side">
+              <div class="hero-stats">
+                <div class="stat-card stat-card-1">
+                  <div class="stat-icon-wrapper">
+                    <div class="stat-icon">📊</div>
+                    <div class="stat-glow"></div>
+                  </div>
+                  <div class="stat-value">50</div>
+                  <div class="stat-suffix">+</div>
+                  <div class="stat-label">Skenario Layanan</div>
+                  <div class="stat-progress"></div>
+                </div>
+                <div class="stat-card stat-card-2">
+                  <div class="stat-icon-wrapper">
+                    <div class="stat-icon">⚡</div>
+                    <div class="stat-glow"></div>
+                  </div>
+                  <div class="stat-value">&lt;2</div>
+                  <div class="stat-label">Menit Analisis</div>
+                  <div class="stat-progress"></div>
+                </div>
+                <div class="stat-card stat-card-3">
+                  <div class="stat-icon-wrapper">
+                    <div class="stat-icon">✅</div>
+                    <div class="stat-glow"></div>
+                  </div>
+                  <div class="stat-value">100</div>
+                  <div class="stat-suffix">%</div>
+                  <div class="stat-label">Tanpa Login</div>
+                  <div class="stat-progress"></div>
+                </div>
+              </div>
+              <div class="hero-illustration-pane">
+                <div class="illustration-orb"></div>
+                <div class="illustration-card floating">
+                  <div class="quick-steps">
+                    <div class="step-item">
+                      <span class="step-num">1</span>
+                      <span>Pilih Kategori</span>
+                    </div>
+                    <div class="step-arrow">→</div>
+                    <div class="step-item">
+                      <span class="step-num">2</span>
+                      <span>Jawab Pertanyaan</span>
+                    </div>
+                    <div class="step-arrow">→</div>
+                    <div class="step-item">
+                      <span class="step-num">3</span>
+                      <span>Dapatkan Hasil</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="illustration-card delay">
+                  <div class="trust-badges">
+                    <span class="trust-badge">🏛️ Resmi</span>
+                    <span class="trust-badge">🛡️ Terpercaya</span>
+                    <span class="trust-badge">⏱️ Cepat</span>
+                  </div>
+                </div>
+                <div class="illustration-note">
+                  <p>Mesin inferensi kami menyusun kombinasi layanan, dokumen, dan pihak hadir secara real time.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="feature-grid">
+            <article class="feature-card feature-card-1">
+              <div class="feature-icon-wrapper">
+                <div class="feature-icon">🎯</div>
+                <div class="feature-glow"></div>
+              </div>
+              <h3>Rekomendasi Otomatis</h3>
+              <p>Layanan utama &amp; tambahan disesuaikan dengan kategori kebutuhan pengguna menggunakan mesin IF-THEN yang cerdas.</p>
+              <div class="feature-link">
+                <span>Pelajari lebih lanjut</span>
+                <span class="arrow">→</span>
+              </div>
+            </article>
+            <article class="feature-card feature-card-2">
+              <div class="feature-icon-wrapper">
+                <div class="feature-icon">📋</div>
+                <div class="feature-glow"></div>
+              </div>
+              <h3>Dokumen &amp; Kehadiran</h3>
+              <p>Checklist naratif dokumen serta pihak wajib hadir selalu tampil kontekstual sesuai kebutuhan spesifik Anda.</p>
+              <div class="feature-link">
+                <span>Pelajari lebih lanjut</span>
+                <span class="arrow">→</span>
+              </div>
+            </article>
+            <article class="feature-card feature-card-3">
+              <div class="feature-icon-wrapper">
+                <div class="feature-icon">📤</div>
+                <div class="feature-glow"></div>
+              </div>
+              <h3>Bisa Dicetak &amp; Dibagikan</h3>
+              <p>Copy clipboard, share WhatsApp, atau simpan PDF untuk arsip kantor dengan format yang rapi dan profesional.</p>
+              <div class="feature-link">
+                <span>Pelajari lebih lanjut</span>
+                <span class="arrow">→</span>
+              </div>
+            </article>
+          </div>
+
+          <div id="contactSection" class="contact-card">
+            <div>
+              <h3>Kantor Smart Notary+</h3>
+              <h3>Notaris & PPAT Putri Sugiharsiwi, S.H., M.Kn.</h3>
+              <p>Jl. Soekarno-Hatta KM 04, Tahunan, Jepara</p>
+              <p>Telepon/WA: +62 823-2278-9600</p>
+              <p>Email: notarisputri17@gmail.com</p>
+              <p>Jam operasional: 
+                <br>Senin–Jumat 08.00–16.00 WIB
+                <br>Sabtu 08.00–12.00 WIB
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- CONSULTATION -->
+        <section id="view-consult" class="view" aria-live="polite">
+          <div class="wizard-wrapper">
+            <header class="wizard-head">
+              <div>
+                <p class="eyebrow">Form Konsultasi</p>
+                <h2>Pilih kebutuhan Anda</h2>
+                <p>Jawaban Anda akan diproses oleh mesin aturan IF–THEN kami.</p>
+              </div>
+              <button class="ghost-btn" id="backToHome">Kembali ke Home</button>
+            </header>
+
+            <div class="wizard-progress-enhanced">
+              <div class="step-indicators">
+                <div class="step-indicator active" data-step="1">
+                  <div class="step-circle">
+                    <span class="step-number">1</span>
+                    <span class="step-check">✓</span>
+                  </div>
+                  <div class="step-info">
+                    <div class="step-title">Kategori</div>
+                    <div class="step-desc">Pilih kebutuhan</div>
+                  </div>
+                </div>
+                <div class="step-connector"></div>
+                <div class="step-indicator" data-step="2">
+                  <div class="step-circle">
+                    <span class="step-number">2</span>
+                    <span class="step-check">✓</span>
+                  </div>
+                  <div class="step-info">
+                    <div class="step-title">Detail</div>
+                    <div class="step-desc">Transaksi &amp; Objek</div>
+                  </div>
+                </div>
+                <div class="step-connector"></div>
+                <div class="step-indicator" data-step="3">
+                  <div class="step-circle">
+                    <span class="step-number">3</span>
+                    <span class="step-check">✓</span>
+                  </div>
+                  <div class="step-info">
+                    <div class="step-title">Status</div>
+                    <div class="step-desc">Pihak &amp; Pembayaran</div>
+                  </div>
+                </div>
+                <div class="step-connector"></div>
+                <div class="step-indicator" data-step="4">
+                  <div class="step-circle">
+                    <span class="step-number">4</span>
+                    <span class="step-check">✓</span>
+                  </div>
+                  <div class="step-info">
+                    <div class="step-title">Kontak</div>
+                    <div class="step-desc">Informasi tambahan</div>
+                  </div>
+                </div>
+              </div>
+              <div class="progress-track">
+                <div class="progress-bar" id="progressBar"></div>
+              </div>
+            </div>
+
+            <form id="consultForm" novalidate>
+              <div class="wizard-step active" data-step="1">
+                <div class="step-header">
+                  <div class="step-header-icon">📂</div>
+                  <div>
+                    <h3>Kategori Kebutuhan</h3>
+                    <p class="helper-text">Pilih kategori yang paling mendekati kebutuhan Anda</p>
+                  </div>
+                </div>
+                <div class="choice-list" id="categoryChoices"></div>
+                <small class="error-text" data-error-for="category"></small>
+              </div>
+
+              <div class="wizard-step" data-step="2">
+                <div class="step-header">
+                  <div class="step-header-icon">📝</div>
+                  <div>
+                    <h3>Detail Transaksi &amp; Objek</h3>
+                    <p class="helper-text">Lengkapi informasi detail tentang transaksi dan objek</p>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="detailSelect">Jenis kebutuhan spesifik</label>
+                  <select id="detailSelect" disabled>
+                    <option value="">Pilih detail...</option>
+                  </select>
+                  <small class="helper-text" id="detailHelper">
+                    Opsi bergantung kategori yang dipilih.
+                  </small>
+                  <small class="error-text" data-error-for="detail"></small>
+                </div>
+                <div class="form-group">
+                  <p class="label">Jenis objek</p>
+                  <div class="chip-group" id="objectTypeGroup"></div>
+                  <small class="error-text" data-error-for="objectType"></small>
+                </div>
+                <div class="toggle-grid">
+                  <label class="toggle-card">
+                    <input type="checkbox" id="isMortgaged" />
+                    <span class="toggle-label">
+                      <span class="toggle-icon">🔒</span>
+                      <span>Objek sedang diagunkan</span>
+                    </span>
+                  </label>
+                  <label class="toggle-card">
+                    <input type="checkbox" id="isNameMismatch" />
+                    <span class="toggle-label">
+                      <span class="toggle-icon">👤</span>
+                      <span>Objek atas nama orang lain (orang tua/ahli waris)</span>
+                    </span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="wizard-step" data-step="3">
+                <div class="step-header">
+                  <div class="step-header-icon">👥</div>
+                  <div>
+                    <h3>Status Pihak &amp; Pembayaran</h3>
+                    <p class="helper-text">Informasi tentang pihak yang terlibat dan skema pembayaran</p>
+                  </div>
+                </div>
+                <div class="status-grid">
+                  <div class="status-card">
+                    <div class="status-card-head">
+                      <p class="label">Tipe pihak</p>
+                      <small>Pilih sesuai identitas pihak utama</small>
+                    </div>
+                    <div class="pill-group">
+                      <label class="pill-option">
+                        <input type="radio" name="partyType" value="perorangan" />
+                        <span class="pill-surface">Perorangan</span>
+                      </label>
+                      <label class="pill-option">
+                        <input type="radio" name="partyType" value="badan" />
+                        <span class="pill-surface">Badan Hukum</span>
+                      </label>
+                    </div>
+                    <small class="error-text" data-error-for="partyType"></small>
+                  </div>
+
+                  <div class="status-card">
+                    <div class="status-card-head">
+                      <p class="label">Kehadiran pihak</p>
+                      <small>Centang bila ada pihak yang berhalangan hadir</small>
+                    </div>
+                    <label class="pill-toggle">
+                      <input type="checkbox" id="attendanceIssue" />
+                      <span class="pill-toggle-content">
+                        <span class="pill-toggle-icon">📄</span>
+                        <span>
+                          Salah satu pihak tidak hadir <strong>(butuh surat kuasa)</strong>
+                        </span>
+                      </span>
+                    </label>
+                  </div>
+
+                  <div class="status-card">
+                    <div class="status-card-head">
+                      <p class="label">Skema pembayaran</p>
+                      <small>Tentukan pola pembayaran transaksi</small>
+                    </div>
+                    <div class="pill-group">
+                      <label class="pill-option">
+                        <input type="radio" name="paymentType" value="tunai" />
+                        <span class="pill-surface">Tunai</span>
+                      </label>
+                      <label class="pill-option">
+                        <input type="radio" name="paymentType" value="bertahap" />
+                        <span class="pill-surface">Bertahap</span>
+                      </label>
+                      <label class="pill-option">
+                        <input type="radio" name="paymentType" value="kpr" />
+                        <span class="pill-surface">KPR</span>
+                      </label>
+                    </div>
+                    <small class="error-text" data-error-for="paymentType"></small>
+                  </div>
+
+                  <div class="status-card conditional" id="bankPresenceGroup">
+                    <div class="status-card-head">
+                      <p class="label">Kehadiran bank saat tanda tangan</p>
+                      <small>Aktif bila Anda memilih KPR</small>
+                    </div>
+                    <div class="pill-group">
+                      <label class="pill-option">
+                        <input type="radio" name="bankPresence" value="ya" />
+                        <span class="pill-surface">Bank hadir</span>
+                      </label>
+                      <label class="pill-option">
+                        <input type="radio" name="bankPresence" value="tidak" />
+                        <span class="pill-surface">Bank tidak hadir</span>
+                      </label>
+                    </div>
+                    <small class="error-text" data-error-for="bankPresence"></small>
+                  </div>
+                </div>
+              </div>
+
+              <div class="wizard-step" data-step="4">
+                <div class="step-header">
+                  <div class="step-header-icon">📋</div>
+                  <div>
+                    <h3>Informasi Tambahan</h3>
+                    <p class="helper-text">Tambahkan catatan atau informasi kontak untuk hasil yang lebih akurat</p>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="notes">Catatan singkat (opsional)</label>
+                  <textarea id="notes" rows="3" placeholder="Mis. ada sengketa, sertifikat duplikasi, riwayat waris, dll."></textarea>
+                </div>
+                <div class="form-group">
+                  <label for="applicantName">Nama pengaju</label>
+                  <input type="text" id="applicantName" />
+                  <small class="error-text" data-error-for="applicantName"></small>
+                </div>
+                <div class="input-row">
+                  <div class="form-group">
+                    <label for="applicantPhone">Nomor HP</label>
+                    <input type="tel" id="applicantPhone" placeholder="+62..." />
+                    <small class="error-text" data-error-for="applicantPhone"></small>
+                  </div>
+                  <div class="form-group">
+                    <label for="applicantEmail">Email (opsional)</label>
+                    <input type="email" id="applicantEmail" placeholder="nama@contoh.com" />
+                    <small class="error-text" data-error-for="applicantEmail"></small>
+                  </div>
+                </div>
+              </div>
+
+              <div class="wizard-controls">
+                <button type="button" class="ghost-btn" id="prevStep">Sebelumnya</button>
+                <button type="button" class="secondary-btn" id="nextStep">Berikutnya</button>
+                <button type="submit" class="primary-btn" id="processBtn">Proses Rekomendasi</button>
+              </div>
+            </form>
+          </div>
+        </section>
+
+        <!-- RESULT -->
+        <section id="view-result" class="view">
+          <header class="section-header">
+            <p class="eyebrow">Hasil Rekomendasi</p>
+            <h2>Ringkasan layanan siap dibagikan</h2>
+            <p>Salin ke clipboard, kirim ke WhatsApp, atau cetak sebagai PDF.</p>
+          </header>
+          <article class="card result-card">
+            <div class="result-meta" id="resultMeta"></div>
+            <div id="resultSummary"></div>
+            <div class="result-sections">
+              <section>
+                <h3>Dokumen yang diperlukan</h3>
+                <div id="documentsContent"></div>
+              </section>
+              <section>
+                <h3>Pihak yang wajib hadir</h3>
+                <div id="partiesContent"></div>
+              </section>
+              <section>
+                <h3>Catatan &amp; Risiko</h3>
+                <div id="notesContent"></div>
+              </section>
+              <section>
+                <h3>Flow Singkat</h3>
+                <div id="flowContent"></div>
+              </section>
+            </div>
+            <div class="result-actions">
+              <button id="copySummary" class="ghost-btn">Copy Hasil</button>
+              <button id="shareWhatsapp" class="secondary-btn">Kirim ke WhatsApp</button>
+              <button id="printResult" class="secondary-btn">Cetak / Simpan PDF</button>
+              <button id="restart" class="primary-btn">Analisis Lagi</button>
+            </div>
+            <div class="fallback" id="fallbackMessage" hidden>
+              <p>Kasus Anda memerlukan verifikasi manual. Silakan hubungi kami untuk konsultasi lebih lanjut.</p>
+              <a class="primary-btn" href="https://wa.me/6282322789600" target="_blank" rel="noopener">Hubungi Admin</a>
+            </div>
+          </article>
+        </section>
+
+        <!-- MANUAL BOOK -->
+        <section id="view-manual" class="view">
+          <div class="info-layout">
+            <aside class="info-nav" aria-label="Navigasi manual aplikasi">
+              <a href="#manual-profile">Data Diri Pengembang</a>
+              <a href="#manual-overview">Tentang Aplikasi</a>
+              <a href="#manual-intel">Mengapa Termasuk Sistem Cerdas</a>
+              <a href="#manual-flow">Alur &amp; Cara Pakai</a>
+              <a href="#manual-pages">Penjelasan Tiap Halaman</a>
+              <a href="#manual-result">Cara Membaca Hasil</a>
+              <a href="#manual-notes">Catatan Hukum &amp; Privasi</a>
+              <a href="#manual-tech">Detail Teknis</a>
+            </aside>
+            <div class="info-content">
+              <section id="manual-profile" class="info-section faq-card">
+                <h3>Data Diri Pengembang</h3>
+                <p>
+                  Aplikasi ini disusun sebagai proyek tugas akhir Ujian Akhir Semester (UAS) Mata Kuliah Sistem Cerdas.
+                </p>
+                <ul>
+                  <li><strong>Nama:</strong> Kaysha Alvy Nurul Ainiyah</li>
+                  <li><strong>NIM:</strong> 231240001359</li>
+                  <li><strong>Program Studi:</strong> Teknik Informatika</li>
+                  <li><strong>Semester:</strong> 5 (lima)</li>
+                  <li><strong>Kelas:</strong> 5TIF2</li>
+                </ul>
+                <p>
+                  <strong>Universitas Islam Nahdlatul Ulama Jepara</strong>
+                </p>
+              </section>
+              
+              <section id="manual-overview" class="info-section">
+                <h3>Tentang Aplikasi Smart Notary+</h3>
+                <p>
+                  Smart Notary+ adalah sistem rekomendasi internal yang membantu
+                  <strong>Kantor Notaris &amp; PPAT Putri Sugiharsiwi, S.H., M.Kn.</strong>
+                  dalam melakukan pra-analisis kebutuhan klien sebelum konsultasi tatap muka.
+                  Aplikasi ini tidak menggantikan akta maupun nasihat hukum resmi, tetapi menjadi
+                  alat bantu untuk menyusun skenario layanan, daftar dokumen, dan pihak yang wajib hadir.
+                </p>
+              </section>
+
+              <section id="manual-intel" class="info-section">
+                <h3>Mengapa Aplikasi Ini Termasuk Sistem Cerdas</h3>
+                <p>
+                  Dalam konteks Mata Kuliah Sistem Cerdas, aplikasi ini dikategorikan sebagai sistem cerdas karena
+                  tidak sekadar menampilkan informasi statis, tetapi melakukan <strong>pemrosesan pengetahuan berbasis aturan</strong>
+                  untuk menghasilkan rekomendasi yang berbeda-beda sesuai kondisi input pengguna.
+                </p>
+                <ul>
+                  <li>
+                    <strong>Berbasis Pengetahuan (Knowledge-based):</strong>
+                    aturan-aturan layanan Notaris &amp; PPAT (IF–THEN) dikodekan ke dalam program sehingga aplikasi dapat
+                    “menalar” jenis layanan, dokumen, dan pihak yang relevan dari kombinasi jawaban pengguna.
+                  </li>
+                  <li>
+                    <strong>Inferensi Otomatis:</strong>
+                    mesin inferensi membaca kondisi (kategori, detail transaksi, status pihak, skema pembayaran, dsb.)
+                    lalu secara otomatis menyusun output rekomendasi tanpa campur tangan manual di setiap kasus.
+                  </li>
+                  <li>
+                    <strong>Perilaku Adaptif terhadap Input:</strong>
+                    hasil rekomendasi akan berubah apabila input diubah (misalnya objek diagunkan, pembeli badan hukum, pembayaran KPR),
+                    sehingga sistem menyesuaikan diri dengan skenario yang dihadapi pengguna.
+                  </li>
+                  <li>
+                    <strong>Pemodelan Pakar Domain:</strong>
+                    aturan yang digunakan merepresentasikan pengetahuan praktis Notaris &amp; PPAT, sehingga aplikasi bertindak
+                    sebagai “asisten cerdas” yang membantu menyaring kebutuhan sebelum pengguna bertemu pakar sebenarnya.
+                  </li>
+                </ul>
+                <p>
+                  Dengan karakteristik tersebut, aplikasi ini memenuhi ciri dasar sistem cerdas berbasis aturan (rule-based expert system)
+                  yang memanfaatkan pengetahuan terstruktur untuk membantu pengambilan keputusan awal.
+                </p>
+              </section>
+
+              <section id="manual-flow" class="info-section">
+                <h3>Alur Kerja &amp; Cara Menggunakan Aplikasi</h3>
+                <ol>
+                  <li>Buka halaman <strong>Home</strong> dan klik tombol <em>Mulai Konsultasi</em>.</li>
+                  <li>Isi <strong>Step 1 – Kategori Kebutuhan</strong> dengan memilih jenis layanan utama (mis. Peralihan Hak, Kredit, Waris).</li>
+                  <li>Pada <strong>Step 2 – Detail Transaksi &amp; Objek</strong>, lengkapi jenis transaksi, jenis objek, dan kondisi khusus (diagunkan, atas nama orang tua, dll.).</li>
+                  <li>Isi <strong>Step 3 – Status Pihak &amp; Pembayaran</strong>, termasuk apakah ada pihak yang tidak hadir dan pola pembayaran (tunai, bertahap, KPR).</li>
+                  <li>Pada <strong>Step 4 – Informasi Tambahan</strong>, tuliskan catatan singkat bila ada kondisi khusus, lalu isi nama dan nomor HP pengaju.</li>
+                  <li>Tekan tombol <strong>Proses Rekomendasi</strong> untuk menampilkan ringkasan layanan, daftar dokumen, dan pihak yang wajib hadir.</li>
+                  <li>Gunakan tombol <strong>Copy Hasil</strong>, <strong>Kirim ke WhatsApp</strong>, atau <strong>Cetak / Simpan PDF</strong> sesuai kebutuhan.</li>
+                  <li>Untuk memulai ulang konsultasi baru, tekan <strong>Mulai Konsultasi</strong> di header atau tombol <strong>Analisis Lagi</strong> di halaman hasil.</li>
+                </ol>
+              </section>
+
+              <section id="manual-pages" class="info-section">
+                <h3>Penjelasan Tiap Halaman</h3>
+                <ul>
+                  <li>
+                    <strong>Home / Dashboard</strong> — Menjelaskan secara singkat fungsi aplikasi, menampilkan keunggulan utama,
+                    dan menyediakan tombol cepat untuk memulai konsultasi atau membuka panduan singkat.
+                  </li>
+                  <li>
+                    <strong>Form Konsultasi</strong> — Berisi 4 langkah isian berurutan dengan progress bar untuk membantu memastikan
+                    semua data penting sudah dikumpulkan sebelum sistem memproses rekomendasi.
+                  </li>
+                  <li>
+                    <strong>Halaman Proses</strong> — Menampilkan animasi singkat saat mesin aturan IF–THEN membaca input dan menyusun kombinasi layanan,
+                    dokumen, dan pihak yang relevan.
+                  </li>
+                  <li>
+                    <strong>Halaman Hasil / Ringkasan</strong> — Menampilkan jenis layanan utama, layanan tambahan yang disarankan,
+                    catatan hukum, daftar dokumen, dan pihak yang wajib hadir, lengkap dengan tombol aksi (salin, WA, cetak).
+                  </li>
+                  <li>
+                    <strong>Halaman Info / Edukasi</strong> — Berisi penjelasan umum mengenai Notaris dan PPAT, istilah dokumen,
+                    proses AJB, FAQ, dan checklist persiapan tanda tangan.
+                  </li>
+                  <li>
+                    <strong>Halaman Manual Book</strong> — Halaman ini yang menjelaskan penggunaan aplikasi secara lebih rinci
+                    untuk internal kantor dan dokumentasi.</strong>
+                  </li>
+                </ul>
+              </section>
+
+              <section id="manual-result" class="info-section">
+                <h3>Cara Membaca Hasil Rekomendasi</h3>
+                <p>
+                  Setelah proses selesai, aplikasi akan menampilkan ringkasan dalam beberapa blok informasi:
+                </p>
+                <ul>
+                  <li><strong>Layanan Utama</strong> — Jenis akta atau layanan inti yang paling sesuai dengan kebutuhan klien.</li>
+                  <li><strong>Layanan Tambahan</strong> — Layanan pelengkap yang sering kali diperlukan, misalnya PJB sebelum AJB, APHT untuk kredit, atau akta kuasa.</li>
+                  <li><strong>Dokumen Wajib</strong> — Daftar dokumen yang perlu disiapkan klien; petugas front office dapat mencetak atau mengirimkan daftar ini ke klien.</li>
+                  <li><strong>Pihak yang Wajib Hadir</strong> — Pihak yang harus datang saat tanda tangan (penjual, pembeli, pasangan, saksi, perwakilan bank, dll.).</li>
+                  <li><strong>Catatan Hukum / Risiko</strong> — Catatan singkat mengenai hal-hal yang perlu diwaspadai, misalnya sengketa, diagunkan, atau status waris.</li>
+                </ul>
+                <p>
+                  Hasil dari aplikasi ini sebaiknya selalu ditinjau kembali oleh Notaris/PPAT sebelum dijadikan dasar tindakan lebih lanjut.
+                </p>
+              </section>
+
+              <section id="manual-notes" class="info-section">
+                <h3>Catatan Hukum, Keterbatasan &amp; Privasi</h3>
+                <ul>
+                  <li>Aplikasi tidak menyimpan data ke server atau basis data; informasi hanya berada di perangkat pengguna (browser).</li>
+                  <li>Output aplikasi bukan merupakan akta, kutipan akta, maupun pendapat hukum yang mengikat.</li>
+                  <li>Setiap kasus konkret tetap wajib dikonfirmasi dan dianalisis oleh Notaris &amp; PPAT sebelum penandatanganan akta.</li>
+                  <li>Nomor HP yang diinput klien digunakan untuk kemudahan tindak lanjut, misalnya pengiriman checklist melalui WhatsApp.</li>
+                  <li>Disarankan untuk tidak memasukkan data yang sangat sensitif (misalnya nomor sertifikat lengkap dengan NIK) pada kolom catatan.</li>
+                </ul>
+              </section>
+
+              <section id="manual-tech" class="info-section">
+                <h3>Detail Teknis Pembuatan Aplikasi</h3>
+                <ul>
+                  <li><strong>Jenis Aplikasi:</strong> Aplikasi web statis (client-side) tanpa backend dan tanpa database.</li>
+                  <li><strong>Bahasa Pemrograman:</strong> HTML5 untuk struktur halaman, CSS3 untuk tampilan dan animasi, serta JavaScript murni (vanilla JS) untuk logika.</li>
+                  <li><strong>Pola Arsitektur:</strong> Single Page Application sederhana dengan beberapa <em>section</em> yang ditampilkan/disembunyikan menggunakan manipulasi DOM.</li>
+                  <li><strong>Mesin Aturan:</strong> Sistem rekomendasi berbasis aturan IF–THEN yang di-implementasikan di berkas <code>app.js</code> menggunakan objek konfigurasi dan fungsi-fungsi JavaScript.</li>
+                  <li><strong>Penyimpanan Data:</strong> Tanpa penyimpanan permanen; hanya menggunakan <code>sessionStorage</code> untuk menyimpan isian formulir sementara selama sesi berjalan.</li>
+                  <li><strong>Integrasi Eksternal:</strong> Tombol kirim ke WhatsApp menggunakan skema URL <code>wa.me</code>, serta fitur cetak/simpan PDF dengan <code>window.print()</code> dan CSS <code>@media print</code>.</li>
+                  <li><strong>Desain &amp; Responsivitas:</strong> Menggunakan teknik responsive design (flexbox, grid, media queries) dan animasi CSS, ditambah <code>IntersectionObserver</code> di JavaScript untuk animasi saat konten muncul ketika discroll.</li>
+                </ul>
+              </section>
+
+            </div>
+          </div>
+        </section>
+
+        <!-- INFO -->
+        <section id="view-info" class="view">
+          <div class="info-layout">
+            <aside class="info-nav" aria-label="Navigasi informasi">
+              <a href="#info-notaris-ppat">Perbedaan Notaris vs PPAT</a>
+              <a href="#info-proses-ajb">Proses Umum AJB</a>
+              <a href="#info-dokumen">Dokumen Umum</a>
+              <a href="#info-faq">Pertanyaan Umum</a>
+              <a href="#info-checklist">Panduan Persiapan</a>
+            </aside>
+            <div class="info-content">
+              <section id="info-notaris-ppat" class="info-section">
+                <h3>Perbedaan Notaris vs PPAT</h3>
+                <p>Notaris berwenang membuat akta otentik perdata umum seperti pendirian dan perubahan badan hukum, perjanjian, wasiat, dan pernyataan. PPAT berwenang membuat akta otentik peralihan hak atas tanah/bangunan dan pembebanannya, seperti AJB, Hibah, APHT, serta pemecahan sertifikat.</p>
+              </section>
+
+              <section id="info-proses-ajb" class="info-section">
+                <h3>Proses Umum AJB</h3>
+                <ol>
+                  <li>Pemeriksaan awal dokumen penjual dan pembeli serta sertifikat ke BPN.</li>
+                  <li>Perhitungan pajak (BPHTB, PPh) dan pelunasan kewajiban.</li>
+                  <li>Penandatanganan PJB bila pembayaran belum lunas.</li>
+                  <li>Tanda tangan AJB di PPAT disertai saksi.</li>
+                  <li>Balik nama sertifikat di BPN.</li>
+                  <li>Serah terima sertifikat baru kepada pembeli atau bank.</li>
+                </ol>
+              </section>
+
+              <section id="info-dokumen" class="info-section">
+                <h3>Dokumen Umum &amp; Definisi</h3>
+                <ul>
+                  <li><strong>SPPT/PBB:</strong> Bukti pungutan pajak bumi dan bangunan tahun berjalan.</li>
+                  <li><strong>BPHTB:</strong> Bea perolehan hak atas tanah dan bangunan yang wajib dilunasi sebelum AJB.</li>
+                  <li><strong>SKMHT:</strong> Surat kuasa membebankan hak tanggungan, biasanya sebelum APHT.</li>
+                  <li><strong>APHT:</strong> Akta pembebanan hak tanggungan yang menjadi dasar sertifikat hak tanggungan.</li>
+                  <li><strong>Fidusia:</strong> Jaminan atas benda bergerak seperti kendaraan/mesin.</li>
+                </ul>
+              </section>
+
+              <section id="info-faq" class="info-section faq-card">
+                <h3>Pertanyaan Umum</h3>
+                <details open>
+                  <summary>Jika salah satu pihak tidak hadir, apakah boleh?</summary>
+                  <p>Boleh dengan surat kuasa khusus bermeterai dilampiri KTP pemberi kuasa dan penerima kuasa.</p>
+                </details>
+                <details>
+                  <summary>Apa yang terjadi jika sertifikat masih diagunkan?</summary>
+                  <p>Harus diterbitkan SKMHT terlebih dahulu lalu dilanjutkan dengan APHT setelah pelunasan.</p>
+                </details>
+                <details>
+                  <summary>Apakah badan hukum boleh membeli tanah?</summary>
+                  <p>Ya, asalkan melampirkan AD/ART, SK pengesahan, SK pengurus, dan NIB.</p>
+                </details>
+                <details>
+                  <summary>Berapa lama proses AJB?</summary>
+                  <p>Tergantung kelengkapan dokumen dan BPN setempat, rata-rata 3–14 hari kerja setelah dokumen lengkap.</p>
+                </details>
+              </section>
+
+              <section id="info-checklist" class="info-section">
+                <h3>Panduan Persiapan Sebelum Tanda Tangan</h3>
+                <ul>
+                  <li>Pastikan pajak (BPHTB dan PPh) sudah dihitung dan disiapkan.</li>
+                  <li>Bawa identitas asli seluruh pihak dan pasangan (jika menikah).</li>
+                  <li>Siapkan bukti pembayaran dan jadwal pelunasan bila bertahap.</li>
+                  <li>Konfirmasi ketersediaan saksi PPAT dan perwakilan bank.</li>
+                </ul>
+                <button id="downloadChecklist" class="ghost-btn">Unduh Checklist</button>
+                <button id="contactAdmin" class="secondary-btn">Konsultasi via Admin</button>
+              </section>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="app-footer">
+        <p>
+          Smart Notary+ digunakan oleh
+          <strong>Kantor Notaris &amp; PPAT Putri Sugiharsiwi, S.H., M.Kn.</strong>
+          sebagai alat bantu internal untuk pra-konsultasi dan edukasi klien (bukan nasihat hukum resmi).
+        </p>
+        <small>
+          &copy; <span id="copyrightYear"></span> Smart Notary+ — Kantor Notaris &amp; PPAT Putri Sugiharsiwi, S.H., M.Kn.
+          All rights reserved.
+        </small>
+      </footer>
+    </div>
+    <div class="modal-backdrop" id="guideModal" aria-hidden="true">
+      <div class="modal" role="dialog" aria-modal="true" aria-labelledby="guideTitle">
+        <div class="modal-header">
+          <h3 id="guideTitle">Panduan Singkat</h3>
+          <button id="closeGuide" aria-label="Tutup panduan">&times;</button>
+        </div>
+        <ol>
+          <li>Pilih kategori &amp; detail kebutuhan pada form konsultasi.</li>
+          <li>Tentukan status pihak, pembayaran, serta catatan tambahan.</li>
+          <li>Tekan “Proses Rekomendasi” untuk melihat hasil dan bagikan.</li>
+        </ol>
+        <button id="guideToConsult" class="primary-btn">Mulai Sekarang</button>
+      </div>
+    </div>
+    <div class="toast-stack" id="toastStack" aria-live="polite"></div>
+    <script src="app.js"></script>
+  </body>
+</html>
+

@@ -636,21 +636,6 @@ komersial tanpa izin tertulis dari pemilik hak cipta.
 
 ---
 
-## 📝 Changelog
-
-### Version 1.0.0 (Desember 2024)
-
-- ✅ Initial release
-- ✅ Implementasi mesin aturan IF-THEN
-- ✅ 5 kategori utama dengan 20+ detail layanan
-- ✅ Form wizard 4 langkah
-- ✅ Responsive design untuk semua device
-- ✅ Fitur ekspor (Copy, WhatsApp, PDF)
-- ✅ Halaman informasi dan edukasi
-- ✅ Manual book lengkap
-
----
-
 <div align="center">
 
 **Smart Notary+** — *Sistem Cerdas untuk Layanan Notaris & PPAT*

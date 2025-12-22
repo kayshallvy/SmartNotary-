@@ -21,14 +21,13 @@
 3. [Mengapa Termasuk Sistem Cerdas](#-mengapa-termasuk-sistem-cerdas)
 4. [Fitur Utama](#-fitur-utama)
 5. [Struktur Aplikasi](#-struktur-aplikasi)
-6. [Cara Instalasi & Menjalankan](#-cara-instalasi--menjalankan)
-7. [Panduan Penggunaan](#-panduan-penggunaan)
-8. [Penjelasan Halaman](#-penjelasan-halaman)
-9. [Mesin Aturan IF-THEN](#-mesin-aturan-if-then)
-10. [Kategori Layanan](#-kategori-layanan)
-11. [Detail Teknis](#-detail-teknis)
-12. [Catatan Hukum & Privasi](#-catatan-hukum--privasi)
-13. [Kontak & Dukungan](#-kontak--dukungan)
+6. [Panduan Penggunaan](#-panduan-penggunaan)
+7. [Penjelasan Halaman](#-penjelasan-halaman)
+8. [Mesin Aturan IF-THEN](#-mesin-aturan-if-then)
+9. [Kategori Layanan](#-kategori-layanan)
+10. [Detail Teknis](#-detail-teknis)
+11. [Catatan Hukum & Privasi](#-catatan-hukum--privasi)
+12. [Kontak & Dukungan](#-kontak--dukungan)
 
 ---
 
@@ -165,49 +164,6 @@ cerdas1/
 | `README.md` | Dokumentasi lengkap aplikasi | Dokumen ini |
 
 ---
-
-## 🚀 Cara Instalasi & Menjalankan
-
-### Prasyarat
-
-- Browser modern (Chrome, Firefox, Edge, Safari versi terbaru)
-- Tidak memerlukan server atau database
-- Tidak memerlukan instalasi package/library
-
-### Langkah Menjalankan
-
-#### Metode 1: Buka Langsung
-1. Navigasi ke folder aplikasi
-2. Klik ganda file `index.html`
-3. Aplikasi akan terbuka di browser default
-
-#### Metode 2: Menggunakan Live Server (VS Code)
-1. Buka folder aplikasi di VS Code
-2. Install extension **Live Server** (jika belum)
-3. Klik kanan pada `index.html` → **Open with Live Server**
-4. Aplikasi akan terbuka di `http://127.0.0.1:5500`
-
-#### Metode 3: Command Line (Python)
-```bash
-# Navigasi ke folder aplikasi
-cd path/to/cerdas1
-
-# Jalankan server sederhana Python
-python -m http.server 8000
-
-# Buka browser ke http://localhost:8000
-```
-
-#### Metode 4: Command Line (Node.js)
-```bash
-# Install serve secara global (sekali saja)
-npm install -g serve
-
-# Jalankan di folder aplikasi
-serve .
-
-# Buka URL yang ditampilkan di terminal
-```
 
 ---
 

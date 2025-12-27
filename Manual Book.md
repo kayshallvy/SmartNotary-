@@ -1,4 +1,4 @@
-# 📘 Smart Notary+ — Manual Book
+# 📘 Manual Book Smart Notary+
 
 <div align="center">
 

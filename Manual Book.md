@@ -2,38 +2,16 @@
 
 <div align="center">
 
-![Smart Notary+](https://img.shields.io/badge/Smart%20Notary%2B-v1.0-155eef?style=for-the-badge)
-![Status](https://img.shields.io/badge/Status-Active-00a896?style=for-the-badge)
-![License](https://img.shields.io/badge/License-Internal%20Use-orange?style=for-the-badge)
-
 **Sistem Rekomendasi Layanan Notaris & PPAT Berbasis Aturan Cerdas**
 
 *Kantor Notaris & PPAT Putri Sugiharsiwi, S.H., M.Kn.*
 
 </div>
 
----
-
-## 📑 Daftar Isi
-
-1. [Informasi Pengembang](#-informasi-pengembang)
-2. [Tentang Aplikasi](#-tentang-aplikasi)
-3. [Mengapa Termasuk Sistem Cerdas](#-mengapa-termasuk-sistem-cerdas)
-4. [Fitur Utama](#-fitur-utama)
-5. [Struktur Aplikasi](#-struktur-aplikasi)
-6. [Panduan Penggunaan](#-panduan-penggunaan)
-7. [Penjelasan Halaman](#-penjelasan-halaman)
-8. [Mesin Aturan IF-THEN](#-mesin-aturan-if-then)
-9. [Kategori Layanan](#-kategori-layanan)
-10. [Detail Teknis](#-detail-teknis)
-11. [Catatan Hukum & Privasi](#-catatan-hukum--privasi)
-12. [Kontak & Dukungan](#-kontak--dukungan)
 
 ---
 
-## 👩‍💻 Informasi Pengembang
-
-| Atribut | Keterangan |
+|   |   |
 |---------|------------|
 | **Nama** | Kaysha Alvy Nurul Ainiyah |
 | **NIM** | 231240001359 |
@@ -61,9 +39,6 @@
 - Memberikan catatan hukum dan risiko yang perlu diperhatikan
 - Mempercepat proses konsultasi awal dengan klien
 
-### Batasan Aplikasi
-
-> ⚠️ **Penting:** Aplikasi ini **BUKAN** pengganti akta notaris maupun nasihat hukum resmi. Output aplikasi bersifat rekomendasi awal yang tetap harus dikonfirmasi dan divalidasi oleh Notaris & PPAT yang berwenang.
 
 ---
 
@@ -75,19 +50,7 @@ Dalam konteks Mata Kuliah **Sistem Cerdas**, aplikasi Smart Notary+ dikategorika
 
 Aturan-aturan layanan Notaris & PPAT dikodekan dalam format **IF-THEN** sehingga aplikasi dapat "menalar" jenis layanan, dokumen, dan pihak yang relevan berdasarkan kombinasi jawaban pengguna.
 
-```javascript
-// Contoh struktur aturan dalam aplikasi
-const goalRules = {
-  'jual-beli': {
-    type: 'PPAT',
-    service: 'Akta Jual Beli (AJB)',
-    docKeys: ['ajb_docs'],
-    partiesKey: 'ajb_parties',
-    flowKey: 'ajb_flow',
-    notes: ['Penjual & pembeli wajib hadir, siapkan bukti lunas pajak dan BPHTB.']
-  }
-  // ... aturan lainnya
-};
+``` 
 ```
 
 ### 2. Inferensi Otomatis
@@ -156,14 +119,12 @@ cerdas1/
 
 ### Penjelasan File
 
-| File | Fungsi | Ukuran Perkiraan |
-|------|--------|------------------|
-| `index.html` | Struktur UI, navigasi, form konsultasi, modal, dan komponen visual | ~755 baris |
-| `styles.css` | Desain responsif, animasi, tema warna, dan layout | ~2357 baris |
-| `app.js` | Mesin inferensi, katalog aturan, validasi form, dan interaksi | ~1136 baris |
-| `README.md` | Dokumentasi lengkap aplikasi | Dokumen ini |
-
----
+| File | Fungsi |
+|------|--------|
+| `index.html` | Struktur UI, navigasi, form konsultasi, modal, dan komponen visual | 
+| `styles.css` | Desain responsif, animasi, tema warna, dan layout | 
+| `app.js` | Mesin inferensi, katalog aturan, validasi form, dan interaksi |
+| `Manual Book.md` | Manual Book aplikasi |
 
 ---
 
@@ -173,7 +134,7 @@ cerdas1/
 
 ```
 ┌─────────────┐    ┌─────────────┐    ┌─────────────┐    ┌─────────────┐
-│   STEP 1    │───▶│   STEP 2    │───▶│   STEP 3    │───▶│   STEP 4    │
+│   STEP 1    │──▶ │   STEP 2   │───▶│   STEP 3    │──▶│   STEP 4    │
 │  Kategori   │    │   Detail    │    │   Status    │    │   Kontak    │
 │  Kebutuhan  │    │  Transaksi  │    │   Pihak     │    │  Tambahan   │
 └─────────────┘    └─────────────┘    └─────────────┘    └─────────────┘
@@ -329,131 +290,6 @@ Edukasi seputar layanan Notaris & PPAT:
 └─────────────────────────────────────────────────────────────────┘
 ```
 
-### Komponen Basis Pengetahuan
-
-#### 1. Goal Rules (Aturan Tujuan)
-Memetakan detail kebutuhan ke layanan yang sesuai.
-
-```javascript
-// Contoh aturan untuk jual-beli tanah
-'jual-beli': {
-  type: 'PPAT',                    // Jenis layanan
-  service: 'Akta Jual Beli (AJB)', // Layanan utama
-  docKeys: ['ajb_docs'],           // Referensi dokumen
-  partiesKey: 'ajb_parties',       // Referensi pihak
-  flowKey: 'ajb_flow',             // Referensi alur
-  notes: ['Penjual & pembeli wajib hadir...']
-}
-```
-
-#### 2. Condition Effects (Efek Kondisi)
-Modifikasi otomatis berdasarkan kondisi khusus.
-
-| Kondisi | Label | Efek |
-|---------|-------|------|
-| `absent-party` | Surat Kuasa Khusus | Tambah dokumen kuasa, pihak tambahan |
-| `installment` | Pengikatan Jual Beli (PJB) | Tambah dokumen PJB, catatan pelunasan |
-| `mortgaged` | SKMHT → APHT | Tambah dokumen agunan, pihak bank |
-| `kpr` | APHT (KPR) | Tambah kehadiran bank, dokumen kredit |
-| `waris-land` | Surat Waris sebelum AJB | Tambah dokumen waris, ahli waris |
-| `corporate-buyer` | Verifikasi Legalitas Badan Hukum | Tambah AD/ART, NIB, SK pengurus |
-
-#### 3. Document Library
-Kumpulan deskripsi dokumen yang diperlukan.
-
-```javascript
-const documentLibrary = {
-  ajb_docs: 'Dokumen AJB: sertifikat asli, PBB & SPPT tahun berjalan...',
-  hibah_docs: 'Dokumen hibah: sertifikat objek, KTP pemberi & penerima...',
-  apht_docs: 'Dokumen APHT/SKMHT: sertifikat, KTP debitur & kreditur...',
-  // ... 15+ jenis dokumen lainnya
-};
-```
-
-#### 4. Parties Library
-Kumpulan deskripsi pihak yang wajib hadir.
-
-```javascript
-const partiesLibrary = {
-  ajb_parties: 'AJB mewajibkan kehadiran penjual dan pembeli...',
-  hibah_parties: 'Akta hibah mengharuskan pemberi dan penerima hibah...',
-  waris_parties: 'Pembagian hak waris mensyaratkan seluruh ahli waris...',
-  // ... pihak lainnya
-};
-```
-
-#### 5. Flow Library
-Langkah-langkah proses untuk setiap jenis layanan.
-
-```javascript
-const flowLibrary = {
-  ajb_flow: [
-    'Pemeriksaan awal dokumen penjual dan pembeli...',
-    'Validasi data di BPN/PPAT dan perhitungan pajak...',
-    'Pelunasan harga sesuai kesepakatan...',
-    'Penandatanganan AJB di hadapan PPAT dengan saksi.',
-    'Balik nama sertifikat di BPN...',
-    'Serah terima sertifikat...'
-  ],
-  // ... 15+ alur lainnya
-};
-```
-
-### Proses Inferensi
-
-```javascript
-function runInference(goalId, conditions) {
-  // 1. Ambil aturan dasar berdasarkan goal
-  const rule = goalRules[goalId];
-  
-  // 2. Inisialisasi output
-  const extras = new Set(rule.extraServices || []);
-  const notes = [...(rule.notes || [])];
-  const docKeys = [...(rule.docKeys || [])];
-  const flowSteps = [...(flowLibrary[rule.flowKey] || [])];
-  let partiesParagraph = partiesLibrary[rule.partiesKey];
-
-  // 3. Aplikasikan efek kondisi
-  conditions.forEach(condId => {
-    const effect = conditionEffects[condId];
-    if (!effect) return;
-    
-    // Tambahkan layanan ekstra
-    if (effect.label) extras.add(effect.label);
-    
-    // Tambahkan dokumen
-    if (effect.docKeys) docKeys.push(...effect.docKeys);
-    
-    // Tambahkan catatan
-    if (effect.additionalNotes) notes.push(...effect.additionalNotes);
-    
-    // Tambahkan langkah flow
-    if (effect.flowStep) flowSteps.push(effect.flowStep);
-    
-    // Gabungkan pihak tambahan
-    if (effect.partiesKey) {
-      partiesParagraph += ` ${partiesLibrary[effect.partiesKey]}`;
-    }
-  });
-
-  // 4. Compile dokumen dari library
-  const documents = docKeys.map(key => documentLibrary[key]).filter(Boolean);
-
-  // 5. Return hasil lengkap
-  return {
-    type: rule.type,
-    service: rule.service,
-    extras: Array.from(extras),
-    notes,
-    documents,
-    parties: partiesParagraph,
-    flow: flowSteps
-  };
-}
-```
-
----
-
 ## 📊 Kategori Layanan
 
 ### 1. Peralihan Hak (Tanah/Bangunan)
@@ -597,51 +433,6 @@ Frontend Stack:
 
 5. **WhatsApp Share** — Fitur kirim ke WhatsApp menggunakan URL scheme standar dan tidak menyimpan data di aplikasi.
 
-### Hak Cipta
-
-```
-© 2024 Smart Notary+ — Kantor Notaris & PPAT Putri Sugiharsiwi, S.H., M.Kn.
-All rights reserved.
-
-Aplikasi ini dibuat untuk penggunaan internal kantor dan tugas akademik.
-Dilarang memperbanyak, mendistribusikan, atau menggunakan untuk tujuan
-komersial tanpa izin tertulis dari pemilik hak cipta.
-```
 
 ---
 
-## 📞 Kontak & Dukungan
-
-### Kantor Notaris & PPAT
-
-| Informasi | Detail |
-|-----------|--------|
-| **Kantor** | Notaris & PPAT Putri Sugiharsiwi, S.H., M.Kn. |
-| **Alamat** | Jl. Soekarno-Hatta KM 04, Tahunan, Jepara |
-| **Telepon/WA** | +62 823-2278-9600 |
-| **Email** | notarisputri17@gmail.com |
-
-### Jam Operasional
-
-| Hari | Jam |
-|------|-----|
-| Senin – Jumat | 08.00 – 16.00 WIB |
-| Sabtu | 08.00 – 12.00 WIB |
-| Minggu & Libur | Tutup |
-
-### Quick Links
-
-- 📱 **WhatsApp**: [wa.me/6282322789600](https://wa.me/6282322789600)
-- 📧 **Email**: [notarisputri17@gmail.com](mailto:notarisputri17@gmail.com)
-
----
-
-<div align="center">
-
-**Smart Notary+** — *Sistem Cerdas untuk Layanan Notaris & PPAT*
-
-Dibuat dengan ❤️ untuk UAS Mata Kuliah Sistem Cerdas
-
-**Universitas Islam Nahdlatul Ulama Jepara**
-
-</div>
